@@ -76,6 +76,7 @@ namespace omp
                   X = _mm_load_ps(sq_matrix_1 + row + k);
                   Y = _mm_load_ps(sq_matrix_3 + row2 + k);
                   acc = _mm_add_ps(acc, _mm_mul_ps(X, Y));
+                  
 //                  sq_matrix_result[num] = sq_matrix_result[num] + sq_matrix_1[row + k] * sq_matrix_3[row2 + k];
               }
               _mm_store_ps(&temp[0], acc);
